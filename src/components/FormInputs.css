@@ -10,3 +10,19 @@ input {
   border-radius: 5px;
   border: 1px solid gray;
 }
+
+label {
+  font-style: 12px;
+  color: rgb(100, 98, 98);
+}
+
+span {
+  font-style: 12px;
+  padding: 3px;
+  color: rgb(226, 57, 57);
+  display: none;
+}
+
+input:invalid ~ span {
+  display: block;
+}

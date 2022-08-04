@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./FormInputs.css";
 
 const FormInputs = (props) => {
+  const [focused, setFocused] = useState(false);
   const { label, errorMessage, onChange, id, ...inputprops } = props;
-  //   console.log(props);
+
+  const handleFocus = (e) => {
+    setFocused(true);
+  };
+
   return (
     <div className="formInput">
       <label>{label}</label>
-      <input {...inputprops} onChange={onChange} />
+      <input
+        {...inputprops}
+        onChange={onChange}
+        onBlur={handleFocus}
+        focused={focused.toString()}
+      />
       <span>{errorMessage}</span>
     </div>
   );

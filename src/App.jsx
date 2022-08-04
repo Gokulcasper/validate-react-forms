@@ -76,14 +76,17 @@ const App = () => {
     <div className="App">
       <form onSubmit={handleSubmit}>
         <h1>Register</h1>
-        {input.map((input) => (
-          <FormInputs
-            key={input.id}
-            {...input}
-            value={values[input.name]}
-            onChange={onChange}
-          />
-        ))}
+        {input.map((input) => {
+          console.log(input);
+          return (
+            <FormInputs
+              key={input.id}
+              {...input}
+              value={values[input.name]}
+              onChange={onChange}
+            />
+          );
+        })}
         <button>Submit</button>
       </form>
     </div>

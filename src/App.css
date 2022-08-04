@@ -19,8 +19,9 @@ form {
 }
 
 h1 {
-  color: rgb(93, 91, 91);
+  color: rgb(77, 48, 150);
   text-align: center;
+  text-decoration: underline;
 }
 
 button {
